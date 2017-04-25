@@ -27,8 +27,8 @@ public class myClass extends JPanel {
 				BasicStroke.JOIN_ROUND));
 		g.setColor(Color.WHITE);
 		
-		int boxesWidth = 13;
-		int boxesHeight = 18;
+		int boxesWidth = 40;
+		int boxesHeight = 8;
 		
 		for(int x = 0; x < boxesWidth; x++) {
 			for(int y = 0; y < boxesHeight; y++) {
