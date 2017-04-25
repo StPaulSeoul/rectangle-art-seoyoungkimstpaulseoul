@@ -27,27 +27,24 @@ public class myClass extends JPanel {
 				BasicStroke.JOIN_ROUND));
 		g.setColor(Color.WHITE);
 		
-		//Rectangle2D r = new Rectangle2D.Double(100, 200, 100, 100);
-		//fill. screen with rectangles
-		int boxesWidth = 25;
-		int boxesHeight = 13;
+		int boxesWidth = 13;
+		int boxesHeight = 18;
 		
-		for(int x = 0; x <boxesWidth; x++) {
+		for(int x = 0; x < boxesWidth; x++) {
 			for(int y = 0; y < boxesHeight; y++) {
 				
 				int v = (int)((double)255 / (double)(boxesWidth + boxesHeight) * (x + y));
 						
-				Color c = new Color(0, v, 225, v); //RGBA - Red Green Blue Alpha, 0~255
+				Color c = new Color(255-v, v, 255, 255); //RGBA - Red Green Blue Alpha, 0~255
 				g2.setColor(c);
 				
-				//instantiate our rectangle
 				Rectangle2D r = new Rectangle2D.Double(
 						x * size.getWidth()  / boxesWidth,
 						y * size.getHeight() / boxesHeight,
 						size.getWidth()  / boxesWidth,
 						size.getHeight() / boxesHeight
 						);
-				//Draw our rectangle
+
 				g2.fill(r);
 				
 			}
